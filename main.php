@@ -126,8 +126,8 @@
 		}
 		fclose($fin);
 	}
-	mysql_connect('annomewhen.db.9892216.hostedresource.com','annomewhen','Numaidebine1');
-	mysql_select_db("annomewhen");
+	mysql_connect('localhost','root','test123') or die ("database error");
+	mysql_select_db("TT");
 	$sql='CREATE TABLE IF NOT EXISTS `USERS` ('
         . ' `user` VARCHAR(100) NOT NULL, '
         . ' `img_link` VARCHAR(200) NULL'

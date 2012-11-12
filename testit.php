@@ -2,8 +2,8 @@
 	$proj_name=$_GET["proj"];
 	$proj_own=$_GET["own"];
 	if(isset($_POST["user"])){ //user has given his name as input
-		mysql_connect('annomewhen.db.9892216.hostedresource.com','annomewhen','Numaidebine1');
-		mysql_select_db("annomewhen");
+		mysql_connect('localhost','root','test123') or die ("database error");
+		mysql_select_db("TT");
 		$date=date("Y-m-j G:i:s");
 		$sql="UPDATE TTs SET test_by='".$_POST["user"]."',test_date='".$date."',tested=1 WHERE user='".$proj_own."'  AND project='".$proj_name."'";
 		mysql_query($sql); //update Last tested by fields

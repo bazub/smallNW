@@ -19,8 +19,8 @@
 	';
 	$proj_name=$_GET["proj"];
 	$proj_own=$_GET["own"];
-	mysql_connect('annomewhen.db.9892216.hostedresource.com','annomewhen','Numaidebine1');
-	mysql_select_db("annomewhen");
+	mysql_connect('localhost','root','test123') or die ("database error");
+	mysql_select_db("TT");
 	$sql="SELECT * FROM TTs WHERE user='".$proj_own."'  AND project='".$proj_name."'";
 	$res=mysql_query($sql); //get all the details for the given user&project name
 	if(!$res){ //Project does not exist for the current user/project_name combination -> does not happen unless modifying the GET parameters in the url

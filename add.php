@@ -1,7 +1,7 @@
 <?php
 	if(isset($_POST["user"])){ //a user has been given 
-		mysql_connect('annomewhen.db.9892216.hostedresource.com','annomewhen','Numaidebine1') or die ("database error");
-		mysql_select_db("annomewhen");
+		mysql_connect('localhost','root','test123') or die ("database error");
+		mysql_select_db("TT");
 		$sql="INSERT INTO USERS (user) VALUES('".$_POST["user"]."')"; 
 		mysql_query($sql);	//insert the user in the DB
 		echo '
